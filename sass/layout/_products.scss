@@ -1,0 +1,125 @@
+.product__label{
+    margin-top: 0;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    color: #FFA5BA;
+}
+
+.product__text {
+    padding: 0 40px;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+.product__title {
+    padding-top: 160px;
+    margin-bottom: 70px;
+
+    font-size: 20px;
+    line-height: 1,15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.products__card{
+    border-radius: 24px;
+    height: 489px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    &:not(:last-child){
+        margin-bottom: 140px;
+    }
+    &:first-child {
+        margin-top: 148px;
+    }
+   
+}
+
+
+// встановлюємо кольори на секцію
+
+.products__card--one{
+    background-color: var(--first-part);
+    position: relative;
+    &::before {
+            content: "";
+            width: 280px;
+            height: 280px;
+            background-image: url(../images/img-s3.png);
+            display: block;
+            position: absolute;
+            top: 0;
+                left: 50%;
+                transform: (-50% -50%);
+                transform: translate(-50%, -50%);
+        }
+}
+
+.products__card--two {
+    background-color: var(--second-part);
+    position: relative;
+    &::before {
+            content: "";
+            width: 280px;
+            height: 280px;
+            background-image: url(../images/img-s2.png);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: (-50% -50%);
+            transform: translate(-50%, -50%);
+            }
+
+        }
+
+.products__card--three {
+    background-color: var(--third-part);
+    position: relative;
+    &::before{
+            content: "";
+            width: 280px;
+            height: 280px;
+            background-image: url(../images/img-s1.png);
+            display: block;
+            position: absolute;
+            top: 0;
+                left: 50%;
+                transform: (-50% -50%);
+                transform: translate(-50%, -50%);
+        }
+}
+
+.button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: var(--primary-color);
+
+}
