@@ -106,6 +106,7 @@ img {
 }
 
 .product__text {
+  position: relative;
   padding: 0 40px;
   font-family: "DM Sans";
   font-style: normal;
@@ -114,6 +115,22 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
+}
+.product__text::before {
+  position: absolute;
+  content: "";
+  width: 26px;
+  height: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: aliceblue;
+  text-align: center;
+  background-image: url(../../images/Group\ 4.png);
+  top: -32px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .product__title {
@@ -154,8 +171,6 @@ img {
   position: absolute;
   top: 0;
   left: 50%;
-  -webkit-transform: -50% -50%;
-          transform: -50% -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -199,7 +214,15 @@ img {
 }
 
 .button {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 40px;
   height: 40px;
   margin-top: 32px;
@@ -209,4 +232,10 @@ img {
   border-radius: 50%;
   border-color: transparent;
   background-color: var(--primary-color);
+}
+
+.button__icon {
+  width: 20px;
+  height: 20px;
+  fill: rgb(212, 20, 67);
 }/*# sourceMappingURL=main.css.map */
