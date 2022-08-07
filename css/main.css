@@ -42,7 +42,8 @@ li {
 h1,
 h2,
 h3,
-ul {
+ul,
+p {
   padding-bottom: 0px;
   padding-top: 0px;
   margin: 0px;
@@ -88,6 +89,24 @@ img {
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.wrapper {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    gap: 16px;
+  }
 }
 
 .product__label {
@@ -146,7 +165,7 @@ img {
 
 .products__card {
   border-radius: 24px;
-  height: 489px;
+  height: 100%;
   max-width: 280px;
   margin-left: auto;
   margin-right: auto;
@@ -156,6 +175,12 @@ img {
 }
 .products__card:first-child {
   margin-top: 148px;
+}
+@media screen and (min-width: 768px) {
+  .products__card {
+    -ms-flex-preferred-size: calc((100% - 32px) / 3);
+        flex-basis: calc((100% - 32px) / 3);
+  }
 }
 
 .products__card--one {
@@ -167,12 +192,19 @@ img {
   width: 280px;
   height: 280px;
   background-image: url(../images/img-s3.png);
+  background-size: cover;
   display: block;
   position: absolute;
   top: 0;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .products__card--one::before {
+    height: 224px;
+    width: 224px;
+  }
 }
 
 .products__card--two {
@@ -184,6 +216,7 @@ img {
   width: 280px;
   height: 280px;
   background-image: url(../images/img-s2.png);
+  background-size: cover;
   display: block;
   position: absolute;
   top: 0;
@@ -192,6 +225,12 @@ img {
           transform: -50% -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .products__card--two::before {
+    height: 224px;
+    width: 224px;
+  }
 }
 
 .products__card--three {
@@ -203,6 +242,7 @@ img {
   width: 280px;
   height: 280px;
   background-image: url(../images/img-s1.png);
+  background-size: cover;
   display: block;
   position: absolute;
   top: 0;
@@ -211,6 +251,12 @@ img {
           transform: -50% -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .products__card--three::before {
+    height: 224px;
+    width: 224px;
+  }
 }
 
 .button {
