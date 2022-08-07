@@ -60,6 +60,7 @@
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
+    transition: transform 250ms linear;
 
     &::before {
         position: absolute;
@@ -73,6 +74,7 @@
         top: -32px;
         left: 50%;
         transform: translate(-50%, -50%);
+        
     }
 
     @media screen and(min-width:768px) {
@@ -95,6 +97,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--primary-color);
+    transition: transform 250ms linear 250ms;
 
     @media screen and(min-width:768px) {
         padding-top: 118px;
@@ -151,16 +154,40 @@
             top: 0;
             left: 50%;
             transform: translate(-50%, -50%);
+            transition: transform 250ms linear;
+            z-index: 10;
+            @media(min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/img-s3@2x.png);
+                }
            
             @media screen and(min-width:768px) {
                     height: 224px;
                     width: 224px;
                     top:-32px;
+                    background-image: url(../images/img-m3.png);
+
+                @media(min-device-pixel-ratio: 2),
+                    (-webkit-min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url(../images/img-m3@2x.png);
+                    }
             }
             @media screen and(min-width:1200px) {
                     height: 394px;
                     width: 368px;
                     top:-64px;
+                    background-image: url(../images/img-l3.png);
+                    
+                        @media(min-device-pixel-ratio: 2),
+                        (-webkit-min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: url(../images/img-l3@2x.png);
+                        }
                         }
                 }
         }
@@ -181,20 +208,45 @@
             left: 50%;
             transform: (-50% -50%);
             transform: translate(-50%, -50%);
+            transition: transform 250ms linear;
+            z-index: 10;
+            @media(min-device-pixel-ratio: 2),
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: url(../images/img-s2@2x.png);
+                }
 
             @media screen and(min-width:768px) {
                 height: 224px;
                 width: 224px;
                 top: -32px;
-            }
+                background-image: url(../images/img-m2.png);
+                
+                    @media(min-device-pixel-ratio: 2),
+                    (-webkit-min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url(../images/img-m2@2x.png);
+                    }
+
             @media screen and(min-width:1200px) {
                 height: 394px;
                 width: 368px;
                 top: -64px;
-                         }
+                background-image: url(../images/img-l2.png);
+                
+                    @media(min-device-pixel-ratio: 2),
+                    (-webkit-min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url(../images/img-l2@2x.png);
+                    }
+            }
         }
 
         }
+    }
 
 .products__card--three {
     background-color: var(--third-part);
@@ -208,22 +260,99 @@
             display: block;
             position: absolute;
             top: 0;
-                left: 50%;
-                transform: (-50% -50%);
-                transform: translate(-50%, -50%);
+            left: 50%;
+            transform: (-50% -50%);
+            transform: translate(-50%, -50%);
+            transition: transform 250ms linear;
+            z-index: 10;
+
+                @media(min-device-pixel-ratio: 2),
+                    (-webkit-min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                        background-image: url(../images/img-s1@2x.png);
+                    }
                 @media screen and(min-width:768px) {
                         height: 224px;
                         width: 224px;
                         top: -32px;
+                        background-image: url(../images/img-m1.png);
+                        
+                            @media(min-device-pixel-ratio: 2),
+                            (-webkit-min-device-pixel-ratio: 2),
+                            (min-resolution: 192dpi),
+                            (min-resolution: 2dppx) {
+                                background-image: url(../images/img-m1@2x.png);
+                            }
                     }
                 @media screen and(min-width:1200px) {
                         height: 394px;
                         width: 368px;
                         top: -64px;
+                        background-image: url(../images/img-l1.png);
+                        
+                            @media(min-device-pixel-ratio: 2),
+                            (-webkit-min-device-pixel-ratio: 2),
+                            (min-resolution: 192dpi),
+                            (min-resolution: 2dppx) {
+                                background-image: url(../images/img-l1@2x.png);
+                            }
                                          }
-                }
-            }
-                
+                                        }
+                                        
+                                        }
+
+
+.products__card--three:hover::before,
+.products__card--three:focus::before {
+    transform: scale(50%);
+}
+
+.products__card--three:hover .product__text,
+.products__card--three:focus .product__text {
+    transform: scale(1.2, 1.2);
+
+}
+
+.products__card--three:hover .product__title,
+.products__card--three:focus .product__title {
+    transform: translateY(-20px);
+
+}
+
+.products__card--two:hover::before,
+.products__card--two:focus::before {
+    transform: scale(50%);
+}
+
+.products__card--two:hover .product__text,
+.products__card--two:focus .product__text {
+    transform: scale(1.2, 1.2);
+
+}
+
+.products__card--two:hover .product__title,
+.products__card--two:focus .product__title {
+    transform: translateY(-20px);
+
+}
+
+.products__card--one:hover::before,
+.products__card--one:focus::before {
+    transform: scale(50%);
+}
+
+.products__card--one:hover .product__text,
+.products__card--one:focus .product__text {
+    transform: scale(1.2, 1.2);
+
+}
+
+.products__card--one:hover .product__title,
+.products__card--one:focus .product__title {
+    transform: translateY(-20px);
+
+}
 
 .button {
     display: flex;
@@ -239,6 +368,12 @@
     border-radius: 50%;
     border-color: transparent;
     background-color: var(--primary-color);
+    transition: transform 250ms linear;
+
+    &:hover ,
+    &:focus {
+        transform: scale(1.5, 1.5);
+    }
 
     @media screen and(min-width:1200px) {
         margin-bottom: 60px;

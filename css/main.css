@@ -164,6 +164,10 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   text-align: center;
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
 }
 .product__text::before {
   position: absolute;
@@ -202,6 +206,10 @@ img {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--primary-color);
+  -webkit-transition: -webkit-transform 250ms linear 250ms;
+  transition: -webkit-transform 250ms linear 250ms;
+  transition: transform 250ms linear 250ms;
+  transition: transform 250ms linear 250ms, -webkit-transform 250ms linear 250ms;
 }
 @media screen and (min-width: 768px) {
   .product__title {
@@ -263,12 +271,28 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  z-index: 10;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products__card--one::before {
+    background-image: url(../images/img-s3@2x.png);
+  }
 }
 @media screen and (min-width: 768px) {
   .products__card--one::before {
     height: 224px;
     width: 224px;
     top: -32px;
+    background-image: url(../images/img-m3.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__card--one::before {
+    background-image: url(../images/img-m3@2x.png);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -276,6 +300,12 @@ img {
     height: 394px;
     width: 368px;
     top: -64px;
+    background-image: url(../images/img-l3.png);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products__card--one::before {
+    background-image: url(../images/img-l3@2x.png);
   }
 }
 
@@ -297,19 +327,41 @@ img {
           transform: -50% -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  z-index: 10;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products__card--two::before {
+    background-image: url(../images/img-s2@2x.png);
+  }
 }
 @media screen and (min-width: 768px) {
   .products__card--two::before {
     height: 224px;
     width: 224px;
     top: -32px;
+    background-image: url(../images/img-m2.png);
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__card--two::before {
+    background-image: url(../images/img-m2@2x.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .products__card--two::before {
     height: 394px;
     width: 368px;
     top: -64px;
+    background-image: url(../images/img-l2.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products__card--two::before {
+    background-image: url(../images/img-l2@2x.png);
   }
 }
 
@@ -331,12 +383,28 @@ img {
           transform: -50% -50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  z-index: 10;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products__card--three::before {
+    background-image: url(../images/img-s1@2x.png);
+  }
 }
 @media screen and (min-width: 768px) {
   .products__card--three::before {
     height: 224px;
     width: 224px;
     top: -32px;
+    background-image: url(../images/img-m1.png);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__card--three::before {
+    background-image: url(../images/img-m1@2x.png);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -344,7 +412,67 @@ img {
     height: 394px;
     width: 368px;
     top: -64px;
+    background-image: url(../images/img-l1.png);
   }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products__card--three::before {
+    background-image: url(../images/img-l1@2x.png);
+  }
+}
+
+.products__card--three:hover::before,
+.products__card--three:focus::before {
+  -webkit-transform: scale(50%);
+          transform: scale(50%);
+}
+
+.products__card--three:hover .product__text,
+.products__card--three:focus .product__text {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.products__card--three:hover .product__title,
+.products__card--three:focus .product__title {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.products__card--two:hover::before,
+.products__card--two:focus::before {
+  -webkit-transform: scale(50%);
+          transform: scale(50%);
+}
+
+.products__card--two:hover .product__text,
+.products__card--two:focus .product__text {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.products__card--two:hover .product__title,
+.products__card--two:focus .product__title {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.products__card--one:hover::before,
+.products__card--one:focus::before {
+  -webkit-transform: scale(50%);
+          transform: scale(50%);
+}
+
+.products__card--one:hover .product__text,
+.products__card--one:focus .product__text {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.products__card--one:hover .product__title,
+.products__card--one:focus .product__title {
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
 }
 
 .button {
@@ -366,6 +494,14 @@ img {
   border-radius: 50%;
   border-color: transparent;
   background-color: var(--primary-color);
+  -webkit-transition: -webkit-transform 250ms linear;
+  transition: -webkit-transform 250ms linear;
+  transition: transform 250ms linear;
+  transition: transform 250ms linear, -webkit-transform 250ms linear;
+}
+.button:hover, .button:focus {
+  -webkit-transform: scale(1.5, 1.5);
+          transform: scale(1.5, 1.5);
 }
 @media screen and (min-width: 1200px) {
   .button {
