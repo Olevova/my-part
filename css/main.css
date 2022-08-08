@@ -518,7 +518,6 @@ img {
 
 .products__modal {
   display: block;
-  position: absolute;
   width: 30vw;
   height: 40vh;
   background-color: var(--first-part);
@@ -528,4 +527,25 @@ img {
 }
 .products__modal > p {
   padding: 20px 10px;
+}
+
+.first {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.two {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.three {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */
