@@ -36,18 +36,23 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et. dolore magna aliqua facilisis.
             </p>
-            <button type="button" class="button">
+            <button data-modal-open type="button" class="button">
               <svg class="button__icon" width="32" height="32">
                 <use href="./images/symbol-defs.svg#icon-arrow-right"></use>
               </svg>
             </button>
-            <div class="products__modal first">
+            <div class="products__modal first is-hidden">
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolores sunt
                 cupiditate tempora culpa alias voluptatibus autem labore. Iste quam impedit
                 voluptatum numquam, nesciunt qui. Itaque asperiores facere eveniet minima amet
                 quisquam, totam exercitationem, ipsum quas, nobis eligendi doloremque adipisci.
               </p>
+              <button data-modal-close type="button" class="products__modalbutton">
+                <svg class="button_productmodal" width="30" hiegh="30">
+                  <use class="iconcross" href="./images/symbol-defs.svg#icon-close-black"></use>
+                </svg>
+              </button>
             </div>
           </li>
           <li class="products__card products__card--two">
@@ -68,6 +73,11 @@
                 voluptatum numquam, nesciunt qui. Itaque asperiores facere eveniet minima amet
                 quisquam, totam exercitationem, ipsum quas, nobis eligendi doloremque adipisci.
               </p>
+              <button type="button" class="products__modalbutton">
+                <svg class="button_productmodal" width="30" hiegh="30">
+                  <use class="iconcross" href="./images/symbol-defs.svg#icon-close-black"></use>
+                </svg>
+              </button>
             </div>
           </li>
           <li class="products__card products__card--three">
@@ -88,11 +98,17 @@
                 voluptatum numquam, nesciunt qui. Itaque asperiores facere eveniet minima amet
                 quisquam, totam exercitationem, ipsum quas, nobis eligendi doloremque adipisci.
               </p>
+              <button type="button" class="products__modalbutton">
+                <svg class="button_productmodal" width="30" hiegh="30">
+                  <use class="iconcross" href="./images/symbol-defs.svg#icon-close-black"></use>
+                </svg>
+              </button>
             </div>
           </li>
         </ul>
         <!-- </div> -->
       </div>
     </section>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

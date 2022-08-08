@@ -15,7 +15,7 @@ html {
   --primary-color: rgba(255, 255, 255, 1);
   --first-part: rgba(255, 184, 202, 1);
   --second-part: rgba(240, 209, 165, 1);
-  --third-part: rgba(194, 226, 151, 1);
+  --third-part: rgb(178, 221, 121);
 }
 
 body {
@@ -526,7 +526,7 @@ img {
   text-align: center;
 }
 .products__modal > p {
-  padding: 20px 10px;
+  padding: 45px 25px;
 }
 
 .first {
@@ -534,13 +534,29 @@ img {
   left: 0;
   top: 0;
   width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.products__modal.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  /* visibility: hidden; */
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
 }
 
 .two {
   position: absolute;
   left: 0;
-  top: 0;
+  top: -100%;
   width: 100%;
+  height: 100%;
+  background-color: var(--second-part);
+  opacity: 1;
+  visibility: hidden;
 }
 
 .three {
@@ -548,4 +564,33 @@ img {
   right: 0%;
   top: 0;
   width: 100%;
+  height: 100%;
+  background-color: var(--third-part);
+}
+
+.products__modalbutton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: inherit;
+  border-color: inherit;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none;
+}
+
+.button_productmodal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  fill: azure;
 }/*# sourceMappingURL=main.css.map */
