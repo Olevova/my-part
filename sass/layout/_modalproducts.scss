@@ -1,0 +1,14 @@
+.products__modal{
+    display:block;
+    position: absolute;
+    width: 30vw;
+    height: 40vh;
+    background-color: var(--first-part);
+    outline: 1px solid red;
+    border-radius: 20px;
+    text-align: center;
+
+    & >p {
+        padding: 20px 10px;
+    }
+}

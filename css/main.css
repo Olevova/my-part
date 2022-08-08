@@ -179,7 +179,7 @@ img {
   display: flex;
   color: aliceblue;
   text-align: center;
-  background-image: url(../../images/Group\ 4.png);
+  background-image: url(../../images/group4.png);
   top: -32px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -514,4 +514,18 @@ img {
   width: 20px;
   height: 20px;
   fill: rgb(212, 20, 67);
+}
+
+.products__modal {
+  display: block;
+  position: absolute;
+  width: 30vw;
+  height: 40vh;
+  background-color: var(--first-part);
+  outline: 1px solid red;
+  border-radius: 20px;
+  text-align: center;
+}
+.products__modal > p {
+  padding: 20px 10px;
 }/*# sourceMappingURL=main.css.map */
