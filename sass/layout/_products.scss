@@ -305,7 +305,7 @@
 
 .products__card--three:hover::before,
 .products__card--three:focus::before {
-    transform: scale(50%);
+    transform: translate(-50%, -50%) scale(90%);
 }
 
 .products__card--three:hover .product__text,
@@ -322,7 +322,7 @@
 
 .products__card--two:hover::before,
 .products__card--two:focus::before {
-    transform: scale(50%);
+    transform: translate(-50%, -50%) scale(90%);
 }
 
 .products__card--two:hover .product__text,
@@ -339,7 +339,7 @@
 
 .products__card--one:hover::before,
 .products__card--one:focus::before {
-    transform: scale(50%);
+    transform: translate(-50%, -50%) scale(90%);
 }
 
 .products__card--one:hover .product__text,
